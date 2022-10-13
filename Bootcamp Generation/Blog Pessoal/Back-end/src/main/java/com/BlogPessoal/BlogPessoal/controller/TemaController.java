@@ -28,7 +28,7 @@ import com.BlogPessoal.BlogPessoal.repository.TemaRepository;
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class TemaController {
 
-	@Autowired
+	@Autowired // Autowired = relação automática
 	private TemaRepository temaRepository;
 	
 	@GetMapping
