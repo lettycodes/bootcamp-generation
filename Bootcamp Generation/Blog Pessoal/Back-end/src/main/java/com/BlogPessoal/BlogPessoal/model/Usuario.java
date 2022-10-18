@@ -41,6 +41,17 @@ public class Usuario {
 	@JsonIgnoreProperties("usuario") // para o retorno do Json, ignore essa propriedade ("nome da propriedade que poderia entrar em loop infinito")
 	private List<Postagem> postagem; // traz uma lista (array) de postagens
 
+	public Usuario(Long id, String nome, String usuario, String senha, String foto) {
+		this.id = id;
+		this.nome = nome;
+		this.usuario = usuario;
+		this.senha = senha;
+		this.foto = foto;
+	}
+
+	public Usuario() {
+	}
+
 	public Long getId() {
 		return id;
 	}

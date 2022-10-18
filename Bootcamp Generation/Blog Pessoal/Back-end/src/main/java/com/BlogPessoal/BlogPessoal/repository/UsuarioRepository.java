@@ -1,5 +1,6 @@
 package com.BlogPessoal.BlogPessoal.repository;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -12,5 +13,7 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long>{ // Jpa 
 	// Nós extendemos a JPA porque dentro dela tem todos os métodos criados, aqueles que usamos no banco de dados, e podemos também criar novos métodos específicos, além dos padrões
 
 	public Optional<Usuario> findByUsuario(String usuario); // pesquisa por um usuário específico
+	
+	public List <Usuario> findAllByNomeContainingIgnoreCase(String nome);
 	
 }
